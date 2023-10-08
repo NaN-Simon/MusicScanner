@@ -17,7 +17,7 @@ const createLiElement = (liElement) => {
   const serial = document.createElement('span')
   const path = document.createElement('span')
   const file = document.createElement('div')
-  const birthtime = document.createElement('div')
+  const time = document.createElement('div')
   const link = document.createElement('a')
   serial.innerHTML = liElement.id
   serial.classList.add("serial")
@@ -25,12 +25,12 @@ const createLiElement = (liElement) => {
   path.classList.add("path")
   file.innerHTML = liElement.filename
   file.classList.add("file")
-  birthtime.innerHTML = liElement.birthtime
-  birthtime.classList.add('birthtime')
+  time.innerHTML = liElement.time
+  time.classList.add('time')
   link.innerHTML = 'Ссылка YouTube'
   link.classList.add('link')
   link.href = `https://www.youtube.com/results?search_query=${liElement.filename}`
-  li.append(serial, path, file, birthtime, link)
+  li.append(serial, path, file, time, link)
   li.classList.add("li")
   return li
 }
