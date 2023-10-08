@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicScanner</title>
+  <style>
+    .ul {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid grey;
+      padding: 5px;
+    }
+
+    .path{
+      color: rgb(63, 63, 63);
+      font-weight: 700;
+      font-family: monospace;
+    }
+
+    .path::before {
+      content: "-";
+      padding-right: 5px;
+    }
+
+    .file{
+      max-width: 500px;
+    }
+
+    .file::before {
+      content: "-";
+      padding-right: 5px;
+    }
+
+    .birthtime{
+      color: rgb(63, 63, 63);
+      font-weight: 700;
+      font-family: monospace;
+    }
+
+    .link {
+      text-decoration: none;
+      color: red;
+      font-weight: 900;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="findInput"></input>
+  <button id="testBtn">CLEAN</button>
+  <ul id="ul" class="ul">
+    <li class="li">
+      <span>№</span>
+      <span class="path">Path</span>
+      <span class="file">Name</span>
+      <a class="link" href="#">Link</a>
+    </li>
+  </ul>
+  <script src="index.js"></script>
+</body>
+
+</html>
